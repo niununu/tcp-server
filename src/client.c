@@ -40,7 +40,7 @@ int main(int argc,char *argv[])
 	//int inet_aton(const char* strptr,struct in_addr *addrptr)
 	inet_aton(ip ,&remote.sin_addr);//char* -> inaddr
 	//remote.sin_addr.s_addr = htonl(ip);
-	
+
 	int ret = connect(sock,(struct sockaddr*)&remote,sizeof(remote));
 
 	if(ret < 0)
@@ -85,12 +85,7 @@ int main(int argc,char *argv[])
 		else
 		{
 			buf_read[ret] = '\0';
-			if (!strcmp(buf_read, "keep_alive_echo"))
-			{
-				n = write(sock,"keep_alive_ack",15);
-			}
-			else
-				printf("server response:-> %s",buf_read);
+			printf("server response:-> %s",buf_read);
 		}
 
 	}

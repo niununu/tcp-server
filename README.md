@@ -17,9 +17,9 @@ tcp-server简单实现
 
     c. "controller"请求：表示请求获取controller权限.
 
-            当前没有controller用户响应Success，client为controller用户响应Success;
-            
-            否则响应Failure;
+        当前没有controller用户响应Success，client为controller用户响应Success;
+
+        否则响应Failure;
 
     d. 其他请求：除上述三种请求外都响应Failure
 

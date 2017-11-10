@@ -18,11 +18,6 @@
 
 extern pthread_t g_controller_id;
 
-void keep_alive()
-{
-	n = write(socketfd,"keep_alive_echo\n", 16);
-}
-
 int handle_require(char* input)
 {
 	int response = -1;
