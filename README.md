@@ -12,10 +12,15 @@ tcp-server简单实现
 3. 客户端请求处理逻辑：
 
     a.　"read"请求：所有用户都响应Success
+
     b.　"write"请求：只有controller用户响应Success，其他用户响应Failure
+
     c. "controller"请求：表示请求获取controller权限.
+
             当前没有controller用户响应Success，client为controller用户响应Success;
+            
             否则响应Failure;
+
     d. 其他请求：除上述三种请求外都响应Failure
 
 # 文件描述
